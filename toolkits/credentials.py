@@ -9,3 +9,15 @@ class Credentials:
             self.token = 'ваш секретный ключ' #в кавычки нужно подставить свой токен из личного кабинета Dadata
             self.openaikey = 'ваш секретный ключ' #сюда нужно подставить свой секретный ключ OpenAI
 
+            
+class SimpleCredentials:
+
+    def __init__(self):
+
+        self.password = {
+            'User1:'PASSWORD' # Добавьте сюда свою связку логина и пароля
+        }
+    
+    def get(self, user):
+        return self.password.get(user)
+    
